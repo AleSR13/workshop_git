@@ -11,8 +11,8 @@ git config --list
 ### Set config
 
 ```
-git config --global user.name "Alejandra Hernandez Segura"
-git config --global user.email "ale_email@example.com"
+git config --global user.name "Alejandra H Segura"
+git config --global user.email "43819685+AleSR13@users.noreply.github.com"
 git config --global init.defaultBranch main
 ```
 
@@ -23,7 +23,7 @@ The branch name "main" is currently more accepted than the name "master" that wa
 When you want to modify a repo that exists in GitHub/Gitlab:
 
 ```
-git clone <url>
+git clone https://github.com/AleSR13/workshop_git.git
 ```
 
 When you want to start a repo locally:
@@ -37,7 +37,7 @@ When you want to start a repo locally:
 
 ### Create and check out branches
 
-Create branches in your repo:
+Create branches in your repo (if not existing):
 
 ```
 # May fail if it already exists
@@ -46,10 +46,9 @@ git checkout -b dev
 
 It is always a good idea to have a branch called "dev" (and maybe another one called "stage" or "test" or similar) and not working directly in "main". Like this, you can leave "main" as a working repo whereas "dev" and "test" can be a playground and a space for testing new features, respectively.
 
-Here everyone can clone the original repo and then checkout the dev branch
+If the dev branch already exists, you can just check it out
 
 ```
-git clone <url>
 git checkout dev
 ```
 
@@ -79,7 +78,7 @@ Add first a `.gitignore` file in the root directory and enlist stuff you don't w
 .env.ps1
 ```
 
-Now you see that nothing is staged because you haven't changed anything except an ignored file. Now we can change a real file!
+Now you see that only the `.gitignore` appears as "to be staged" because you haven't changed anything else except an ignored file. Now we can change a real file!
 
 Go to the file `src\hello_world.py` and see what it does. You can test it running the following command in Windows:
 
@@ -96,7 +95,7 @@ python src/hello_world.py
 It is already telling you that you need to set up your password. You already put it in a PowerShell script but you need to run that script to set it up:
 
 ```
-.evn.ps1
+.env*
 ```
 
 Now, change something in the `src\hello_world.py` file. For example, in line 5, instead of "Hello, world!" it should greet with "Hello, <your name>!"
@@ -105,6 +104,7 @@ Now, you can stage it, commit it and push it to your branch!
 
 ```
 git add . -n
+# Review changes
 git add .
 git commit -m "[FEAT] Specific greeting for Ale"
 git push origin feat/ale
