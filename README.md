@@ -92,12 +92,6 @@ In Linux or MacOS the command would be:
 python src/hello_world.py
 ```
 
-It is already telling you that you need to set up your password. You already put it in a PowerShell script but you need to run that script to set it up:
-
-```
-.env*
-```
-
 Now, change something in the `src\hello_world.py` file. For example, in line 5, instead of "Hello, world!" it should greet with "Hello, <your name>!"
 
 Now, you can stage it, commit it and push it to your branch!
