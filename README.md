@@ -155,7 +155,7 @@ git tag
 To create a tag do:
 
 ```
-git tag -l "v1.0.0" -m "Version 1 contains code for saying hello to the world through python"
+git tag -a "v1.0.0" -m "Version 1 contains code for saying hello to the world through python"
 ```
 
 Note that there cannot be duplicated tags. That is why tags usually have certain conventions with a notation like the one I used (`v.0.1.0`) where the `v`means `version`; the first number is the "major release" indicating major changes in the code and likely lack of compatibility between major versions; the second number means "minor release" indicating extra features with respect to the previous release; finally, the last number refers to a "patch", which basically means a small bug fix or some update for security that does not affect functionality.
